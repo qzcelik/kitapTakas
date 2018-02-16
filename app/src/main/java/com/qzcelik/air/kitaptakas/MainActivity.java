@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             Intent giriYap = new Intent(MainActivity.this,GirisYap.class);
             startActivity(giriYap);
+            startActivity(giriYap);
+            startActivity(giriYap);
+            startActivity(giriYap);
         }
         if(view.getId() == R.id.uyeBut)
         {
