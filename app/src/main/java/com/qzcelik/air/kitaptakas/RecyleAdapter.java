@@ -45,12 +45,12 @@ public class RecyleAdapter extends  RecyclerView.Adapter<RecyleAdapter.ViewHolde
 
     List<kitapBilgileri> listKitap;
     CustomItemClickListener listener;
-
-    public  RecyleAdapter(List<kitapBilgileri> listKitap,CustomItemClickListener listener)
+    Context context;
+    public  RecyleAdapter(Context context,List<kitapBilgileri> listKitap,CustomItemClickListener listener)
     {
         this.listKitap = listKitap;
         this.listener = listener;
-
+        this.context = context;
     }
 
 
@@ -75,6 +75,24 @@ public class RecyleAdapter extends  RecyclerView.Adapter<RecyleAdapter.ViewHolde
 
         holder.kitapAd.setText(listKitap.get(position).getKitapAd());
         holder.kitapTur.setText(listKitap.get(position).getKitapTur());
+
+
+        RequestQueue queue = Volley.newRequestQueue(context);//cardview  resimleri için
+
+        ImageRequest resimIstek = new ImageRequest(listKitap.get(position).getKitapResim(), new Response.Listener<Bitmap>() {
+            @Override//sunucudan link ile resim istendi imageview'de gösterildi
+            public void onResponse(Bitmap response) {
+              holder.kitapResim.setImageBitmap(response);
+            }
+        },0,0,null,
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                }
+        );
+        queue.add(resimIstek);
 
     }
 
