@@ -17,7 +17,7 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
     TextView text;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    Button kitapEkleButon,kitapListeleButon;
+    Button kitapEkleButon,kitapListeleButon,kitapTakas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,9 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
 
         kitapListeleButon = (Button)findViewById(R.id.kitapListeBut);
         kitapListeleButon.setOnClickListener(this);
+
+        kitapTakas = (Button)findViewById(R.id.kitapBul);
+        kitapTakas.setOnClickListener(this);
 
         text = (TextView)findViewById(R.id.textView);
         text.setText(preferences.getString("kullaniciAdi","default"));
@@ -48,6 +51,12 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
         if(view.getId()==R.id.kitapListeBut)
         {
             Intent intent = new Intent(KullaniciProfil.this,KitapListele.class );
+            startActivity(intent);
+        }
+
+        if(view.getId() == R.id.kitapBul)
+        {
+            Intent intent = new Intent(KullaniciProfil.this,TakasKitap.class);
             startActivity(intent);
         }
     }

@@ -42,7 +42,7 @@ public class kitapEkle extends AppCompatActivity implements View.OnClickListener
     Bitmap bitmap;
     ImageView resimSec;
     Button resimGonder;
-    EditText kitapAdiEt,kitapTuruEt;
+    EditText kitapAdiEt,kitapTuruEt,kitapYazarEt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +59,7 @@ public class kitapEkle extends AppCompatActivity implements View.OnClickListener
         resimGonder = (Button)findViewById(R.id.resimGonderBut);
         kitapAdiEt = (EditText)findViewById(R.id.kitapAdiEt);
         kitapTuruEt = (EditText)findViewById(R.id.kitapTuruEt);
-
+        kitapYazarEt = (EditText)findViewById(R.id.kitapYazarEt);
         resimSec.setOnClickListener(this);
         resimGonder.setOnClickListener(this);
     }
@@ -135,6 +135,7 @@ public class kitapEkle extends AppCompatActivity implements View.OnClickListener
                 parametre.put("kulAd",preferences.getString("kullaniciAdi","default"));
                 parametre.put("kitapAd",kitapAdiEt.getText().toString());
                 parametre.put("kitapTuru",kitapTuruEt.getText().toString());
+                parametre.put("kitapYazar",kitapYazarEt.getText().toString());
                 return  parametre;
             }
         };

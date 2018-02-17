@@ -29,7 +29,6 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_toStartOf="@+id/button"
-                android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:padding="50dp"
                 android:layout_alignRight="@+id/kitapListeBut"
@@ -37,26 +36,13 @@
                 android:background="@drawable/butonbg"
                 android:textSize="20sp"
                 android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal|bold"
+                android:layout_height="130dp" />
 
             <Button
                 android:text="Kitaplarımı Göster"
                 android:layout_width="wrap_content"
                 android:id="@+id/kitapListeBut"
-                android:layout_height="wrap_content"
-                android:padding="50dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/butonbg"
-                android:textSize="20sp"
-                android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold" />
-            <Button
-                android:text="Kitap Bul"
-                android:layout_width="wrap_content"
-                android:id="@+id/kitapBul"
-                android:layout_height="wrap_content"
                 android:padding="50dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
@@ -65,7 +51,21 @@
                 android:textSize="20sp"
                 android:textColor="@color/cardview_light_background"
                 android:textStyle="normal|bold"
-                android:layout_marginTop="20dp" />
+                android:layout_height="130dp" />
+            <Button
+                android:text="Takas"
+                android:layout_width="wrap_content"
+                android:id="@+id/kitapBul"
+                android:padding="50dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/butonbg"
+                android:textSize="20sp"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="20dp"
+                android:layout_height="130dp" />
 
 
         </LinearLayout>

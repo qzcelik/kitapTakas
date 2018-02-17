@@ -48,6 +48,14 @@
                 android:hint="Kitap Türü Giriniz"
                 android:layout_marginTop="10dp" />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/kitapYazarEt"
+                android:hint="Kitap Yazar" />
+
             <Button
                 android:text="Kitap Kaydet"
                 android:layout_width="162dp"

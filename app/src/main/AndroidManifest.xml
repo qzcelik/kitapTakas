@@ -24,7 +24,9 @@
         <activity android:name=".KullaniciProfil" />
         <activity android:name=".kitapEkle" />
         <activity android:name=".KitapListele" />
-        <activity android:name=".KitapAyrinti"></activity>
+        <activity android:name=".KitapAyrinti" />
+        <activity android:name=".KitapTakas" />
+        <activity android:name=".TakasKitap"></activity>
     </application>
 
 </manifest>
