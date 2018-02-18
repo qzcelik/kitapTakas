@@ -17,7 +17,7 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
     TextView text;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    Button kitapEkleButon,kitapListeleButon,kitapTakas;
+    Button kitapEkleButon,kitapListeleButon,kitapTakas,takasDurum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,9 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
         kitapTakas = (Button)findViewById(R.id.kitapBul);
         kitapTakas.setOnClickListener(this);
 
+        takasDurum = (Button)findViewById(R.id.takasDurumlari);
+        takasDurum.setOnClickListener(this);
+
         text = (TextView)findViewById(R.id.textView);
         text.setText(preferences.getString("kullaniciAdi","default"));
 
@@ -42,22 +45,35 @@ public class KullaniciProfil extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.kitapEkleBut)
-        {
-            Intent intent = new Intent(KullaniciProfil.this,kitapEkle.class );
-            startActivity(intent);
-        }
 
-        if(view.getId()==R.id.kitapListeBut)
+        switch (view.getId())
         {
-            Intent intent = new Intent(KullaniciProfil.this,KitapListele.class );
-            startActivity(intent);
-        }
+            case R.id.kitapEkleBut:
+            {
+                Intent intent = new Intent(KullaniciProfil.this,kitapEkle.class );
+                startActivity(intent);
+            }break;
 
-        if(view.getId() == R.id.kitapBul)
-        {
-            Intent intent = new Intent(KullaniciProfil.this,TakasKitap.class);
-            startActivity(intent);
-        }
+            case R.id.kitapListeBut:
+            {
+                Intent intent = new Intent(KullaniciProfil.this,KitapListele.class );
+                startActivity(intent);
+
+            }break;
+
+            case R.id.kitapBul:
+            {
+                Intent intent = new Intent(KullaniciProfil.this,TakasKitap.class);
+                startActivity(intent);
+            }break;
+
+            case R.id.takasDurumlari:
+            {
+                Intent intent = new Intent(KullaniciProfil.this,TakasDurum.class);
+                startActivity(intent);
+            }break;
+
+          }
+
     }
 }

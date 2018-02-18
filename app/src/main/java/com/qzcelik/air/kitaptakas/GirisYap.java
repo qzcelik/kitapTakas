@@ -49,7 +49,7 @@ public class GirisYap extends AppCompatActivity implements View.OnClickListener 
         sifreEt = (EditText)findViewById(R.id.kulSifreEtGiris);
 
 
-        
+
         girisButon = (Button)findViewById(R.id.girisButon);
         girisButon.setOnClickListener(this);
 

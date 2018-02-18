@@ -26,7 +26,9 @@
         <activity android:name=".KitapListele" />
         <activity android:name=".KitapAyrinti" />
         <activity android:name=".KitapTakas" />
-        <activity android:name=".TakasKitap"></activity>
+        <activity android:name=".TakasKitap" />
+        <activity android:name=".TakasTeklif" />
+        <activity android:name=".TakasDurum"></activity>
     </application>
 
 </manifest>

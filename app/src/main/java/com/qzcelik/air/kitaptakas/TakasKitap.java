@@ -1,5 +1,6 @@
 package com.qzcelik.air.kitaptakas;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -98,7 +99,16 @@ public class TakasKitap extends AppCompatActivity implements  View.OnClickListen
             @Override                                                                            //  CustomItemClickListener arayüzü
             public void onItemClick(View v, int position) {//recylerda elemana basılnca yapılan işlemler
 
-                
+                kitapBilgileri kitapBilgi = kitapBilgiList.get(position);//tıklanan elemana ait bilgiler alınıyor
+
+                Intent takasIntent = new Intent(TakasKitap.this,TakasTeklif.class);
+
+                takasIntent.putExtra("kitapSahip",kitapBilgi.getKitapSahip());
+                takasIntent.putExtra("takasKitap",kitapBilgi.getKitapAd());
+                takasIntent.putExtra("takasKitapResim",kitapBilgi.getKitapResim());
+
+                startActivity(takasIntent);
+
             }
         });
 
@@ -163,7 +173,7 @@ public class TakasKitap extends AppCompatActivity implements  View.OnClickListen
                   if(jsonObject.getString("kitapTur").equals(adapterView.getSelectedItem().toString()))//o türdeki kitaplar
                         {
                             kitapBilgiList.add(new kitapBilgileri(jsonObject.getString("kitapAd"),jsonObject.getString("kitapTur")
-                                    ,jsonObject.getString("resimYol")));
+                                    ,jsonObject.getString("resimYol"),jsonObject.getString("kulAd")));
 
                         }
                     } catch (JSONException e) {
@@ -201,7 +211,7 @@ public class TakasKitap extends AppCompatActivity implements  View.OnClickListen
                     if(jsonObject.getString("kitapAd").equals(kitapAraEt.getText().toString()))
                     {
                         kitapBilgiList.add(new kitapBilgileri(jsonObject.getString("kitapAd"),
-                                jsonObject.getString("kitapTur"),jsonObject.getString("resimYol")));
+                                jsonObject.getString("kitapTur"),jsonObject.getString("resimYol"),jsonObject.getString("kulAd")));
                     }
                 }
 
@@ -231,7 +241,7 @@ public class TakasKitap extends AppCompatActivity implements  View.OnClickListen
                     if(jsonObject.getString("kitapYazar").equals(yazarAraEt.getText().toString() ))
                     {
                         kitapBilgiList.add(new kitapBilgileri(jsonObject.getString("kitapAd"),
-                                jsonObject.getString("kitapTur"),jsonObject.getString("resimYol")));
+                                jsonObject.getString("kitapTur"),jsonObject.getString("resimYol"),jsonObject.getString("kulAd")));
                     }
                 }
 

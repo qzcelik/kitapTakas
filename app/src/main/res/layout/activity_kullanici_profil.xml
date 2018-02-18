@@ -53,7 +53,7 @@
                 android:textStyle="normal|bold"
                 android:layout_height="130dp" />
             <Button
-                android:text="Takas"
+                android:text="Takas Ara"
                 android:layout_width="wrap_content"
                 android:id="@+id/kitapBul"
                 android:padding="50dp"
@@ -66,6 +66,18 @@
                 android:textStyle="normal|bold"
                 android:layout_marginTop="20dp"
                 android:layout_height="130dp" />
+
+            <Button
+                android:text="Takas Durumları"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:id="@+id/takasDurumlari"
+                android:background="@drawable/butonbg"
+                android:textSize="20sp"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="normal|bold"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp" />
 
 
         </LinearLayout>
