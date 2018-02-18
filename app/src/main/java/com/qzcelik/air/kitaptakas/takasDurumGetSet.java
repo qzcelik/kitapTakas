@@ -10,15 +10,19 @@ public class takasDurumGetSet {
 
     private String asilKitap;
     private String digerKitap;
-    private  String kullanici;
+    private String kullanici;
     private String kitapResim;
+    private int id ;
+    private  int durum;
 
-    public  takasDurumGetSet(String asilKitap,String digerKitap,String kullanici,String kitapResim)
+    public  takasDurumGetSet(String asilKitap,String digerKitap,String kullanici,String kitapResim,int id,int durum)
     {
         this.asilKitap = asilKitap;
         this.digerKitap = digerKitap;
         this.kitapResim = kitapResim;
         this.kullanici = kullanici;
+        this.id =id;
+        this.durum = durum;
     }
 
     public  String getAsilKitap()
@@ -39,4 +43,15 @@ public class takasDurumGetSet {
     {
         return kitapResim;
     }
+
+    public  int getId()
+    {
+        return id;
+    }
+
+    public int getDurum()
+    {
+        return  durum;
+    }
+
 }

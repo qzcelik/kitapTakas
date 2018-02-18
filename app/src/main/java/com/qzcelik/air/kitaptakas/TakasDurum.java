@@ -63,6 +63,7 @@ public class TakasDurum extends AppCompatActivity implements View.OnClickListene
         recyclerView.setLayoutManager(layoutManager);
 
 
+
         veriCek();
     }
 
@@ -125,7 +126,8 @@ public class TakasDurum extends AppCompatActivity implements View.OnClickListene
                     if (jsonObject.getString("istekSahip").equals(anaKullanici))
                     {
                         kitapListe.add(new takasDurumGetSet(jsonObject.getString("kitapSahip"), jsonObject.getString("asilKitap")
-                                , jsonObject.getString("digerKitap"), jsonObject.getString("kitapResim")));
+                                , jsonObject.getString("digerKitap"), jsonObject.getString("kitapResim"),jsonObject.getInt("kitapId"),
+                                jsonObject.getInt("durum")));
                     }
                 }
 
@@ -134,7 +136,8 @@ public class TakasDurum extends AppCompatActivity implements View.OnClickListene
                     if(jsonObject.getString("kitapSahip").equals(anaKullanici))
                     {
                         kitapListe.add(new takasDurumGetSet(jsonObject.getString("kitapSahip"),jsonObject.getString("asilKitap")
-                                ,jsonObject.getString("digerKitap"),jsonObject.getString("kitapResim")));
+                                ,jsonObject.getString("digerKitap"),jsonObject.getString("kitapResim"),jsonObject.getInt("kitapId"),
+                        jsonObject.getInt("durum")));
                     }
                 }
 
@@ -149,7 +152,18 @@ public class TakasDurum extends AppCompatActivity implements View.OnClickListene
             @Override                                                                            //  CustomItemClickListener arayüzü
             public void onItemClick(View v, int position) {//recylerda elemana basılnca yapılan işlemler
 
-                
+                takasDurumGetSet takasIslem = kitapListe.get(position);
+                Intent intent = new Intent(TakasDurum.this,TakasSonuc.class);
+
+                intent.putExtra("kullanici",takasIslem.getKullanici());
+                intent.putExtra("asilKitap",takasIslem.getAsilKitap());
+                intent.putExtra("digerKitap",takasIslem.getDigerKitap());
+                intent.putExtra("kitapResim",takasIslem.getKitapResim());
+                intent.putExtra("id",takasIslem.getId());
+                intent.putExtra("durum",takasIslem.getDurum());
+
+                startActivity(intent);
+
 
           }
         });

@@ -95,29 +95,13 @@ public class UyeOl extends AppCompatActivity  implements View.OnClickListener{
             @Override
             public void onResponse(String response) {
 
-                try
-                {
+                Toast.makeText(UyeOl.this,"Kayıt Başarılı",Toast.LENGTH_SHORT).show();
+                editor.putString("kullaniciAdi",kulAd.getText().toString());//kullanıcı adı saklandı
+                editor.commit();
+                Intent intent = new Intent(UyeOl.this,KullaniciProfil.class);
+                startActivity(intent);
+                finish();
 
-                    JSONArray jsonArray = null ;
-                    JSONObject jsonObject = null ;
-
-                    jsonObject = new JSONObject(response);
-                    jsonArray = jsonObject.getJSONArray("kullanicilar");//JSON dizimize erişiyoruz şuanlık bişey gerekmediği için
-                                                                        //bu şekilde bekliyor
-                    for(int i =0;i<jsonArray.length();i++)
-                    {
-                        sayac++;
-                        jsonObject = (JSONObject) jsonArray.get(i);
-
-                        Toast.makeText(UyeOl.this,jsonObject.getString("kulAd"),Toast.LENGTH_SHORT).show();
-                    }
-
-                 }
-
-                catch (JSONException e)
-                {
-                    e.printStackTrace();
-                }
           }
         },
                 new Response.ErrorListener() {
