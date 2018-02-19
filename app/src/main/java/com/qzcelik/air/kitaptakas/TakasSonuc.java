@@ -1,6 +1,7 @@
 package com.qzcelik.air.kitaptakas;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -35,7 +36,7 @@ public class TakasSonuc extends AppCompatActivity implements View.OnClickListene
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takas_sonuc);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         kitapResim = (ImageView)findViewById(R.id.kitapImg);
 

@@ -1,6 +1,7 @@
 package com.qzcelik.air.kitaptakas;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.Image;
@@ -29,6 +30,7 @@ public class KitapAyrinti extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kitap_ayrinti);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         kitapAd = (TextView)findViewById(R.id.kitapAdText);
         kitapTur = (TextView) findViewById(R.id.kitapTurText);

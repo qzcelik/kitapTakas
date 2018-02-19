@@ -2,6 +2,7 @@ package com.qzcelik.air.kitaptakas;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -53,6 +54,7 @@ public class TakasTeklif extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takas_teklif);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         kitapAd = (TextView)findViewById(R.id.takasKitapAd);
         kitapSahip = (TextView)findViewById(R.id.TakasKitapSahip);
