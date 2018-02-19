@@ -24,7 +24,10 @@
             android:layout_alignParentStart="true"
             android:id="@+id/takasIstBut"
             android:layout_weight="1"
-            android:textSize="10sp" />
+            android:textSize="11sp"
+            android:background="@drawable/butonbg"
+            android:textStyle="normal|bold"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:text="Gelen Takas Teklifleri"
@@ -37,7 +40,11 @@
             android:layout_marginEnd="12dp"
             android:id="@+id/takasTekBut"
             android:layout_weight="1"
-            android:textSize="10sp" />
+            android:background="@drawable/butonbg"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:textSize="11sp" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

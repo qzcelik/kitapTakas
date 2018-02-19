@@ -10,84 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.qzcelik.air.kitaptakas.KullaniciProfil">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:weightSum="1">
-            <Button
-                android:text="Kitap Ekle"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="34dp"
-                android:id="@+id/kitapEkleBut"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/button"
-                android:layout_marginBottom="20dp"
-                android:padding="50dp"
-                android:layout_alignRight="@+id/kitapListeBut"
-                android:layout_alignEnd="@+id/kitapListeBut"
-                android:background="@drawable/butonbg"
-                android:textSize="20sp"
-                android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold"
-                android:layout_height="130dp" />
-
-            <Button
-                android:text="Kitaplarımı Göster"
-                android:layout_width="wrap_content"
-                android:id="@+id/kitapListeBut"
-                android:padding="50dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/butonbg"
-                android:textSize="20sp"
-                android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold"
-                android:layout_height="130dp" />
-            <Button
-                android:text="Takas Ara"
-                android:layout_width="wrap_content"
-                android:id="@+id/kitapBul"
-                android:padding="50dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="@drawable/butonbg"
-                android:textSize="20sp"
-                android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold"
-                android:layout_marginTop="20dp"
-                android:layout_height="130dp" />
-
-            <Button
-                android:text="Takas Durumları"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:id="@+id/takasDurumlari"
-                android:background="@drawable/butonbg"
-                android:textSize="20sp"
-                android:textColor="@color/cardview_light_background"
-                android:textStyle="normal|bold"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp" />
-
-
-        </LinearLayout>
-    </ScrollView>
-
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-        android:background="@color/colorPrimary">
+        android:background="@android:color/holo_blue_dark">
 
     <TextView
         android:text="Hoşgeldin"
@@ -111,6 +38,71 @@
         android:textStyle="normal|bold"
         android:textColor="@color/cardview_light_background" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:text="Kitap Ekle"
+            android:layout_width="match_parent"
+            android:id="@+id/kitapEkleBut"
+            android:background="@drawable/butonbg"
+            android:textSize="20sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="normal|bold"
+            android:layout_height="150dp"
+            android:layout_above="@+id/kitapListeBut"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/kitapBul"
+            android:layout_alignStart="@+id/kitapBul"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Kitaplarımı Göster"
+            android:layout_width="match_parent"
+            android:id="@+id/kitapListeBut"
+            android:background="@drawable/butonbg"
+            android:textSize="20sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="normal|bold"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Takas Ara"
+            android:layout_width="match_parent"
+            android:id="@+id/kitapBul"
+            android:background="@drawable/butonbg"
+            android:textSize="20sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="normal|bold"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_alignTop="@+id/kitapListeBut"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Takas Durumları"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/takasDurumlari"
+            android:background="@drawable/butonbg"
+            android:textSize="20sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/kitapEkleBut"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
     </LinearLayout>
 
 </RelativeLayout>

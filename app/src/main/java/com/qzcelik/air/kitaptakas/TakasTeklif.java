@@ -74,8 +74,8 @@ public class TakasTeklif extends AppCompatActivity implements View.OnClickListen
         kitapResimUrl =veriAl.getExtras().getString("takasKitapResim");
         isteyenKullanici = preferences.getString("kullaniciAdi","default");
 
-        kitapAd.setText(asilKitap);
-        kitapSahip.setText(kitapSahibi);
+        kitapAd.setText("Takas İstenen Kitap : " + asilKitap);
+        kitapSahip.setText("Kitap Sahibi : "+kitapSahibi);
 
 
         bilgiDoldur();//kitap resim ve diğer kitap bilgileri için

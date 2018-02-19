@@ -80,11 +80,13 @@ public class TakasSonuc extends AppCompatActivity implements View.OnClickListene
 
         if(view.getId() == R.id.btnKabul)
         {
+            Toast.makeText(TakasSonuc.this,"Kabul Edildi",Toast.LENGTH_SHORT).show();
             durumDegistir("1");
         }
 
         if(view.getId() == R.id.btnRet)
         {
+            Toast.makeText(TakasSonuc.this,"Reddedildi",Toast.LENGTH_SHORT).show();
             durumDegistir("0");
         }
     }
@@ -98,7 +100,6 @@ public class TakasSonuc extends AppCompatActivity implements View.OnClickListene
        final StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(TakasSonuc.this,response,Toast.LENGTH_SHORT).show();
 
             }
         },

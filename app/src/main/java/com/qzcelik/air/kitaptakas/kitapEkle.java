@@ -115,7 +115,8 @@ public class kitapEkle extends AppCompatActivity implements View.OnClickListener
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(kitapEkle.this, ""+response, Toast.LENGTH_SHORT).show();
+                Toast.makeText(kitapEkle.this, "Kitap Kayıt Başarılı", Toast.LENGTH_SHORT).show();
+                finish();
             }
         },
                 new Response.ErrorListener() {

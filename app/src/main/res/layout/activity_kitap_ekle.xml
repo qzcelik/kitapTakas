@@ -31,30 +31,36 @@
                 android:layout_marginTop="20dp" />
 
             <EditText
-                android:layout_width="372dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/kitapAdiEt"
-                android:hint="Kitap Adı Giriniz"
-                android:layout_marginTop="20dp" />
+                android:hint="  Kitap Adı Giriniz"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/butonbg4"
+                android:paddingStart="5dp" />
 
             <EditText
-                android:layout_width="372dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/kitapTuruEt"
-                android:hint="Kitap Türü Giriniz"
-                android:layout_marginTop="10dp" />
+                android:hint="  Kitap Türü Giriniz"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/butonbg4"
+                android:paddingStart="5dp" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/kitapYazarEt"
-                android:hint="Kitap Yazar" />
+                android:hint="  Kitap Yazar"
+                android:background="@drawable/butonbg4"
+                android:paddingStart="5dp" />
 
             <Button
                 android:text="Kitap Kaydet"
@@ -63,11 +69,14 @@
                 android:id="@+id/resimGonderBut"
                 android:textAlignment="center"
                 android:layout_marginLeft="100dp"
-                android:layout_marginStart="100dp"
+                android:layout_marginStart="90dp"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="80dp" />
+                android:layout_marginTop="50dp"
+                android:background="@drawable/butonbg"
+                android:textStyle="normal|bold"
+                android:textColor="@color/cardview_light_background" />
 
         </LinearLayout>
     </ScrollView>

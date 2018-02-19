@@ -51,6 +51,7 @@ public class UyeOl extends AppCompatActivity  implements View.OnClickListener{
 
     void uiELeman()//UI elemanlarını bulma
     {
+
         kulAd = (EditText)findViewById(R.id.kulAdEt);
         kulSifre = (EditText) findViewById(R.id.kulSifreEt);
         kulSifreTekrar = (EditText)findViewById(R.id.kulSifreTekEt);

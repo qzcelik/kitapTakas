@@ -31,9 +31,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:id="@+id/kulAdEtGiris"
-            android:hint="Kullanıcı Adı"
+            android:hint="   Kullanıcı Adı"
             android:selectAllOnFocus="false"
-            android:background="@drawable/butonbg4" />
+            android:background="@drawable/butonbg4"
+            android:paddingStart="10dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -44,9 +45,10 @@
             android:layout_below="@+id/editText"
             android:layout_alignLeft="@+id/editText"
             android:layout_alignStart="@+id/editText"
-            android:hint="Kullanıcı Şifre"
+            android:hint=" Kullanıcı Şifre"
             android:background="@drawable/butonbg4"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:paddingStart="10dp" />
 
         <Button
             android:text="Giriş Yap"

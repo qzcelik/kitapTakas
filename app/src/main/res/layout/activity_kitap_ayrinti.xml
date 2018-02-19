@@ -46,13 +46,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_weight="1"
-            android:textSize="36sp" />
+            android:textSize="20sp" />
         <TextView
             android:text="Kitap Adi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kitapAdText"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:layout_above="@+id/kitapTurText"
             android:layout_marginBottom="33dp"
             android:layout_marginStart="20dp"
@@ -71,14 +71,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
             android:layout_weight="1"
-            android:textSize="36sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:text="Kitap Türü"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/kitapTurText"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:layout_marginBottom="126dp"
             android:layout_marginStart="10dp"
             android:textStyle="normal|bold" />
